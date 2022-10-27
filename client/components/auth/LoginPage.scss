@@ -1,0 +1,37 @@
+.loginPage {
+    margin-top: 100px;
+
+    .title {
+        margin: 0 0 24px 0;
+    }
+
+    .field {
+        display: block;
+        margin-bottom: 16px !important;
+    }
+
+    .paperWrap {
+        width: 330px;
+        padding: 16px;
+    }
+
+    .button {
+        margin-top: 16px;
+    }
+
+    .links {
+        width: 330px;
+        padding: 16px;
+        color: #fff;
+
+        .link {
+            line-height: 1.6;
+            color: #fff;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

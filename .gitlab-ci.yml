@@ -1,0 +1,68 @@
+variables:
+    GIT_CLONE_PATH: $CI_BUILDS_DIR/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME
+    GIT_STRATEGY: 'fetch'
+    GIT_CHECKOUT: 'true'
+    GIT_CLEAN_FLAGS: 'none'
+    GIT_DEPTH: 0
+
+stages:
+    - deploy
+
+deploy-review:
+    stage: deploy
+    variables:
+        CI_ENVIRONMENT_DOMAIN: $CI_PROJECT_NAME-$CI_COMMIT_REF_NAME.creonit.dev
+    environment:
+        name: review/$CI_COMMIT_REF_NAME
+        url: https://$CI_PROJECT_NAME-$CI_COMMIT_REF_NAME.creonit.dev
+        on_stop: stop-review
+        auto_stop_in: 4 week
+    script:
+        - docker/stage/build
+    only:
+        - branches
+    except:
+        - master
+        - develop
+
+stop-review:
+    stage: deploy
+    variables:
+        GIT_STRATEGY: none
+    script:
+        - docker-compose down --remove-orphans
+        - find -mindepth 1 -delete
+    when: manual
+    environment:
+        name: review/$CI_COMMIT_REF_NAME
+        action: stop
+    only:
+        - branches
+    except:
+        - master
+        - develop
+
+deploy-staging:
+    stage: deploy
+    variables:
+        CI_ENVIRONMENT_DOMAIN: $CI_PROJECT_NAME.creonit.dev
+    environment:
+        name: staging
+        url: https://$CI_PROJECT_NAME.creonit.dev
+    script:
+        - docker/stage/build
+    only:
+        - develop
+
+deploy-production:
+    stage: deploy
+    environment:
+        name: production
+        url: https://prtv.su/
+    variables:
+        GIT_STRATEGY: none
+    script:
+        - ssh -o StrictHostKeyChecking=no root@49.12.7.8 "cd /root/prtv && git pull && docker/prod/build"
+    when: manual
+    only:
+        - master

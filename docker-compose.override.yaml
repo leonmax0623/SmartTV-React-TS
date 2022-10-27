@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+    meteor:
+        build: ./docker/dev
+        working_dir: /app
+        user: "${DOCKER_USER}"
+        command: bash -c "yarn install && yarn start-all"
+        ports:
+            - "3000:3000"
+            - "3007:3007"
+        volumes:
+            - ./:/app
+        environment:
+            - "TZ=Europe/Moscow"
+

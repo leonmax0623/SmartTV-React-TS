@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["es6", "esnext"],
+    "types": ["./server/types/index.d.ts"]
+  },
+  "include": [
+    "./server/**/*",
+    "./shared/**/*"
+  ],
+  "exclude": [
+    "./node_modules",
+    "./.meteor",
+    "./client"
+  ]
+}

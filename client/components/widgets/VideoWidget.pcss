@@ -1,0 +1,63 @@
+.video {
+	position: relative;
+	height: 100%;
+}
+
+.videoFrame {
+	height: 100%;
+	width: 100%;
+}
+
+.logo {
+	position: absolute;
+}
+
+.isHidden {
+	opacity: 0;
+}
+
+.isHiddenVideo {
+	background: #eaeaea url(/img/yt.png) no-repeat center center;
+	box-shadow: inset 0 0 3px red;
+}
+
+.isHiddenVideoVK {
+	background: #eaeaea url(/img/VK_Compact_Logo.png) no-repeat center center;
+	box-shadow: inset 0 0 3px #000;
+	background-size: 90px 90px;
+}
+
+.loader {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	&.hidden {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.vimeoWrapper > * {
+	width: 100%;
+	height: 100%;
+}
+
+.WidgetPlaceholder {
+	  height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+		text-align: center;
+}
+
+.WidgetPlaceholder h1 {
+	font-size: 4rem;
+	line-height: 1;
+}

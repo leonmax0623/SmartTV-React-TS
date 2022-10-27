@@ -1,0 +1,53 @@
+version: '3.5'
+
+services:
+  mongo:
+    container_name: prtv-mongo
+    image: mongo:4.2
+    restart: always
+    command: --replSet rs0
+    ports:
+      # здесь необходимо указать правильный порт
+      - "127.0.0.1:27017:27017"
+    environment:
+      TZ: "Europe/Moscow"
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 5eX9axFSDv7dN2PN
+    volumes:
+      - mongo_db_data:/data/db
+
+  meteor:
+    container_name: prtv-meteor
+    build:
+      dockerfile: ./docker/prod/Dockerfile
+      context: .
+    restart: always
+    expose:
+      - 80
+#    ports:
+#    # здесь необходимо указать правильный порт
+#      - "80:80"
+    environment:
+      TZ: "Europe/Moscow"
+      VIRTUAL_HOST: prtv.su
+      LETSENCRYPT_HOST: prtv.su
+      LETSENCRYPT_EMAIL: xdeadlyx@ya.ru
+    depends_on:
+      - mongo
+    volumes:
+      - ./uploads:/data/uploads
+
+#  certbot:
+#    image: certbot/certbot
+#    volumes:
+#      - ./data/certbot/conf:/etc/letsencrypt
+#      - ./data/certbot/www:/var/www/certbot
+
+volumes:
+  mongo_db_data:
+    external: false
+
+networks:
+  default:
+    external:
+      name: nginx-proxy

@@ -1,0 +1,63 @@
+.container {
+	display: flex;
+	height: 100%;
+}
+
+.toolbar {
+	flex: 0 0 240px;
+	background: #222;
+	display: flex;
+
+	.mainMenu {
+		flex: 0 0 60px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: 1;
+		background: #262626;
+
+		.sliderRoot {
+			margin: 10px auto 0;
+			height: 50px;
+		}
+
+		.sliderTrack, .sliderThumb {
+			background-color: #fff;
+		}
+	}
+
+	.actionsMenu {
+		position: relative;
+		overflow: hidden;
+		flex: 1;
+		background: #333;
+	}
+}
+
+.slideShowAndSlides {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 100%;
+
+	.slideList {
+		display: flex;
+		max-width: calc(100vw - 240px);
+		flex: 0 0 100px;
+		background: #fff;
+	}
+
+	.slideContainer {
+		display: flex;
+		flex: 1 1 100%;
+	}
+}
+
+.isMenuOpen {
+	.mainMenu {
+		z-index: 3;
+	}
+}
+
+.effect {
+	height: 100%;
+}

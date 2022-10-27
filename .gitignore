@@ -1,0 +1,21 @@
+.idea/
+.nvmrc
+ 
+# build
+build/
+generated/
+uploads/
+
+# meteor
+meteor-client.js
+.meteor/local/
+config/local.json
+
+# npm
+node_modules/
+yarn-error.log
+
+# Env
+.env
+.nvmrc
+client/.env.prod

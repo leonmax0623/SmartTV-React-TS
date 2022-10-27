@@ -1,0 +1,9 @@
+*
+!.meteor/
+!node_modules/
+!webpack.config.js
+!tsconfig.json
+!client/tsconfig.json
+!server/tsconfig.json
+
+!server/

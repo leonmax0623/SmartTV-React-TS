@@ -1,0 +1,28 @@
+.idea/*
+.git/
+
+docker/
+data/
+.dockerignore
+docker-compose*.yaml
+Dockerfile
+
+# build
+generated/*
+build/
+uploads/
+
+# meteor
+meteor-client.js
+.meteor/local/*
+config/local.json
+
+# npm
+node_modules/*
+yarn-error.log
+
+# Env
+.env
+.env.dist
+
+

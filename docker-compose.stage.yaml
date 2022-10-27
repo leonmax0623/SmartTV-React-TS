@@ -1,0 +1,39 @@
+version: '3.5'
+
+services:
+    mongo:
+        image: mongo:4.2
+        restart: unless-stopped
+        command: --replSet rs0
+        environment:
+            TZ: "Europe/Moscow"
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: 5eX9axFSDv7dN2PN
+        volumes:
+            - mongo_db_data:/data/db
+
+    meteor:
+        build:
+            dockerfile: ./docker/stage/Dockerfile
+            context: .
+        # user: "${DOCKER_USER}"
+        restart: unless-stopped
+        environment:
+            TZ: "Europe/Moscow"
+            VIRTUAL_HOST: "${CI_ENVIRONMENT_DOMAIN}"
+        depends_on:
+            - mongo
+        volumes:
+            - ./uploads:/data/uploads
+        labels:
+            - "traefik.enable=true"
+            - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-payment.rule=Host(`${CI_ENVIRONMENT_DOMAIN}`) && PathPrefix(`/api/payment/rbk/hook`)"
+            - "traefik.http.routers.${COMPOSE_PROJECT_NAME}.rule=Host(`${CI_ENVIRONMENT_DOMAIN}`)"
+            - "traefik.http.routers.${COMPOSE_PROJECT_NAME}.middlewares=auth"
+            - "traefik.http.routers.t-${COMPOSE_PROJECT_NAME}-payment.rule=Host(`t-${CI_ENVIRONMENT_DOMAIN}`) && PathPrefix(`/api/payment/rbk/hook`)"
+            - "traefik.http.routers.t-${COMPOSE_PROJECT_NAME}.rule=Host(`t-${CI_ENVIRONMENT_DOMAIN}`)"
+            - "traefik.http.routers.t-${COMPOSE_PROJECT_NAME}.middlewares=auth"
+
+volumes:
+    mongo_db_data:
+

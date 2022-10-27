@@ -1,0 +1,60 @@
+.inputOuter {
+	width: 100%;
+	padding-bottom: 15px;
+	position: relative;
+}
+
+.input {
+	display: none !important;
+}
+
+.button {
+	position: relative;
+	width: 100%;
+	height: 28px;
+	cursor: pointer;
+	background: url(/img/transparent-bg.png) repeat;
+	border: none;
+
+	.colorIndicator {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: transparent;
+	}
+}
+
+.picker {
+	z-index: 2;
+	position: absolute;
+}
+
+.cover {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.reset {
+	position: absolute;
+	right: 0;
+	bottom: 14px;
+	padding: 4px;
+	cursor: pointer;
+	color: #fff;
+	background: rgba(0, 0, 0, .3);
+	opacity: .3;
+	transition: .2s ease-in-out;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	svg {
+		font-size: 20px;
+	}
+}

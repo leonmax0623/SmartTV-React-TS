@@ -1,0 +1,29 @@
+.toggleBox {
+    position: relative;
+    .toggleBoxInput {
+        pointer-events: none;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .toggleBoxLabel {
+        display: inline-flex;
+        align-items: center;
+        background-color: #ffffff;
+        color: #555555;
+        cursor: pointer;
+        margin: 0;
+        padding: 6px 11px;
+    }
+    .toggleBoxIcon {
+        margin-left: 6px;
+    }
+    .toggleBoxInput:checked ~ .toggleBoxLabel {
+        color: #ffffff;
+        background-color: transparent;
+    }
+    .toggleBoxInput:disabled ~ .toggleBoxLabel {
+        cursor: not-allowed;
+    }
+}

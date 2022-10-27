@@ -1,0 +1,337 @@
+.TelegramFeedItem {
+	--text-color: #000;
+	--header-text-color: #2481cc;
+	--header-bg-color: "";
+	--header-font-size: 14px;
+	--footer-text-color: #7d7f81;
+	--footer-bg-color: transparent;
+	--bg-color: #fff;
+	--docfile-icon-svg: url('data:image/svg+xml,%3Csvg%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20width%3D%2230%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m16.6538365%204.06433079c.1979918.04563221.3731812.11819804.5454493.22593253l.1128317.07532436c.1136531.08153308.2382757.18981438.4504173.39794253l5.3612119%205.36021649c.3651614.3651614.4782555.5046993.58599.6769675.1077345.1722681.1803003.3474575.2259325.5454493l.0265217.1330464c.0264976.1610204.0378091.3583423.0378091.7599994v11.1969055c0%20.8915187-.0928256%201.214805-.2671327%201.5407309s-.4300957.5817145-.7560216.7560216-.6492122.2671327-1.5407309.2671327h-12.8722296c-.89151874%200-1.21480498-.0928256-1.5407309-.2671327-.32592593-.1743071-.5817145-.4300957-.7560216-.7560216-.16089885-.3008547-.2523697-.5994602-.26549007-1.3448229l-.00164263-17.0681376c0-.89151874.09282561-1.21480498.2671327-1.5407309.1743071-.32592593.43009567-.5817145.7560216-.7560216.3008547-.16089885.5994602-.2523697%201.34482293-.26549007l7.39281347-.00164263c.5164163%200%20.695054.01869859.8930458.06433079zm-.5073899%202.7892226c-.0937682.09376819-.1464466.22094515-.1464466.35355339v3.79289322c0%20.5522847.4477153%201%201%201h3.7928932c.2761424%200%20.5-.2238576.5-.5%200-.1326082-.0526784-.2597852-.1464466-.3535534l-4.2928932-4.29289321c-.1952622-.19526215-.5118446-.19526215-.7071068%200z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
+	--docaudio-icon-svg: url('data:image/svg+xml,%3Csvg%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20width%3D%2230%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m15%205c0-1.1045695.8954305-2%202-2h4c1.1045695%200%202%20.8954305%202%202v4h-6v12c0%202.6887547-2.1223067%204.8818181-4.7831104%204.9953805l-.2168896.0046195c-2.76142375%200-5-2.2385763-5-5s2.23857625-5%205-5c1.1261445%200%202.1653335.3723009%203.0011995%201.0005351z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
+}
+.TelegramFeedItem {
+	padding: 3px 0;
+	.tgme_widget_message {
+		display: inline-block;
+    max-width: 100%;
+    padding-right: 6px;
+    box-sizing: border-box;
+    color: var(--text-color);
+	}
+
+	a {
+		color: #2481cc;
+		text-decoration: none;
+	}
+
+	.tgme_widget_message_owner_name {
+		color: var(--header-text-color);
+	}
+
+	.tgme_widget_message_user {
+		float: left;
+		a {
+			display: inline-block;
+			border-radius: 18px;
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: top;
+			width: 36px;
+			height: 36px;
+			border-radius: 18px;
+		}
+	}
+
+	.tgme_widget_message_bubble {
+		position: relative;
+    background-color: var(--bg-color);
+    padding: 4px 9px;
+		margin-left: 45px;
+		border-radius: 0 10px 10px 10px;
+		box-shadow: 0px 1px 2px 1px rgb(0 0 0 / 20%);
+	}
+
+	.tgme_widget_message_bubble_tail {
+		pointer-events: none;
+    position: absolute;
+    left: -7px;
+    top: 0px;
+	}
+
+	.tgme_widget_message_bubble_tail .bubble_icon {
+    transform-origin: 8px 1px;
+	}
+
+	.tgme_widget_message_author {
+		background-color: var(--header-bg-color);
+    margin: 1px 0 0;
+	}
+
+	.tgme_widget_message_reply,
+	.tgme_widget_message_link_preview,
+	.tgme_widget_message_game,
+	.tgme_widget_message_invoice {
+		display: block;
+    position: relative;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 2px 0 2px 6px;
+    margin: 4px 0 -2px 0;
+    overflow: hidden;
+	}
+
+	.tgme_widget_message_reply:after,
+	.tgme_widget_message_link_preview:before {
+		content: '';
+		position: absolute;
+		background-color: #2481cc;
+		border-radius: 2px;
+		width: 2px;
+		left: 0;
+		top: 2px;
+		bottom: 2px;
+	}
+	
+
+	.tgme_widget_message_reply .tgme_widget_message_author {
+    line-height: 19px;
+    padding-left: 4px;
+    margin: -3px 0 0;
+		font-size: 14px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	
+	.tgme_widget_message_author_name {
+		flex: 0 1 auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 500;
+	}
+
+	.tgme_widget_message_reply .tgme_widget_message_text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-left: 4px;
+    margin: 0 0 -3px;
+		color: var(--text-color);
+		word-break: break-word;
+	}
+	
+	.tgme_widget_message_text {
+		margin-top: 6px;
+    overflow: hidden;
+		color: var(--text-color);
+		word-break: break-word;
+	}
+
+	.tgme_widget_message_document_wrap, .tgme_widget_message_contact_wrap {
+    display: block;
+    border-radius: 25px 0 0 25px;
+    margin: 10px 0;
+    overflow: hidden;
+	}
+
+	.tgme_widget_message_document_icon {
+		display: inline-block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: var(--docfile-icon-svg) no-repeat center;
+		background-color: #2481cc;
+	}
+
+	.tgme_widget_message_document_icon.audio {
+    background-image: var(--docaudio-icon-svg);
+	}
+	
+	.tgme_widget_message_document, .tgme_widget_message_contact {
+		margin-left: 61px;
+	}
+
+	.tgme_widget_message_document_title, .tgme_widget_message_contact_name, .tgme_widget_message_location_title, .tgme_widget_message_game_title, .tgme_widget_message_invoice_title, .tgme_widget_message_game_text, .tgme_widget_message_invoice_description, .tgme_widget_message_error {
+    font-size: 14px;
+	}
+
+	.tgme_widget_message_document_extra, .tgme_widget_message_contact_phone {
+    font-size: 14px;
+    color: var(--second-color);
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0 0 4px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+		color: #7d7f81;
+}
+
+	.tgme_widget_message_link_preview, .tgme_widget_message_game {
+    padding-left: 10px;
+    margin-top: 4px;
+	}
+	.tgme_widget_message_footer {
+		color: var(--footer-text-color);
+		background-color: var(--footer-bg-color);
+    margin-right: -2px;
+		margin: 5px 0 0;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+	}
+
+	.tgme_widget_message_voice_player + .tgme_widget_message_footer .tgme_widget_message_info, .tgme_widget_message_text.before_footer + .tgme_widget_message_footer .tgme_widget_message_info {
+			position: relative;
+	}
+
+
+	.tgme_widget_message_voice_player + .tgme_widget_message_footer, .tgme_widget_message_text.before_footer + .tgme_widget_message_footer {
+    margin-top: -14px;
+	}
+
+	.tgme_widget_message_info {
+		text-align: right;
+	}
+
+	.tgme_widget_message_info.short {
+		float: right;
+	}
+
+	.tgme_widget_message_views, .tgme_widget_message_voters, .tgme_widget_message_meta {
+    margin-left: 7px;
+	}
+
+	.tgme_widget_message_views, .tgme_widget_message_voters {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    margin-left: 10px;
+	}
+	.copyonly {
+			color: transparent;
+			display: inline-block;
+			vertical-align: baseline;
+			width: 1px;
+			height: 0;
+			background: 0 no-repeat none;
+			font-size: 0;
+			float: left;
+			text-rendering: auto;
+	}
+	.tgme_widget_message_meta {
+    max-width: 100%;
+		color: var(--footer-text-color);
+	}
+	.tgme_widget_message_date{
+		vertical-align: top;
+    white-space: nowrap;
+    color: inherit;
+		text-decoration: none;
+	}
+	.link_preview_title {
+    font-weight: 500;
+    color: var(--text-color);
+    margin-top: 4px;
+    margin-bottom: 1px;
+	}
+	.link_preview_description {
+    color: var(--text-color);
+    margin-top: 4px;
+    margin-bottom: 1px;
+	}
+	.link_preview_right_image {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    float: right;
+    border-radius: 6px;
+    margin-left: 10px;
+    background: no-repeat center;
+    background-size: cover;
+	}
+	.link_preview_image, .tgme_widget_message_game_image, .tgme_widget_message_invoice_image {
+    display: block;
+    margin: 7px 0;
+    border-radius: 6px;
+    background: no-repeat center;
+    background-size: cover;
+	}
+	.tgme_widget_message_photo_wrap {
+    display: block;
+    background: no-repeat -10000px -10000px;
+    background-size: 0 0;
+    margin: 12px -17px;
+    min-width: calc(100% + 34px) !important;
+    max-width: calc(100% + 34px) !important;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+	}
+	.tgme_widget_message_bubble > .TelegramFeedItem__photos >  .tgme_widget_message_photo_wrap,
+	.tgme_widget_message_bubble > .TelegramFeedItem__photos > .tgme_widget_message_video_player,
+	 .tgme_widget_message_bubble > .TelegramFeedItem__photos > .tgme_widget_message_grouped_wrap,
+	  .tgme_widget_message_bubble > .TelegramFeedItem__photos > .tgme_widget_message_location_wrap {
+    margin: 10px -9px;
+    min-width: calc(100% + 18px) !important;
+    max-width: calc(100% + 18px) !important;
+	}
+	.tgme_widget_message_grouped {
+    position: relative;
+	}
+	.tgme_widget_message_grouped_layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+	}
+	.tgme_widget_message_grouped .grouped_media_wrap {
+    position: absolute;
+    margin: 0;
+    cursor: pointer;
+    min-width: auto !important;
+    max-width: none !important;
+	}
+	
+	.tgme_widget_message_grouped .tgme_widget_message_photo_wrap.blured:before, .tgme_widget_message_grouped .tgme_widget_message_photo_wrap.blured:after {
+    visibility: hidden;
+    transition: visibility .2s ease;
+	}
+	.tgme_widget_message_photo_wrap.blured:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -30px;
+    right: -30px;
+    top: -30px;
+    bottom: -30px;
+    background: no-repeat center;
+    background-size: cover;
+    background-image: inherit;
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
+    z-index: 1;
+	}
+	.grouped_media_helper {
+    position: static;
+    background-position: -10000px -10000px;
+    background-size: 0 0;
+    background-image: inherit;
+	}
+	.grouped_media_wrap .grouped_media {
+    position: absolute;
+	}
+	.tgme_widget_message_photo {
+    display: block;
+    position: relative;
+    background: no-repeat center;
+    background-size: cover;
+    background-image: inherit;
+    margin: 0 auto;
+    z-index: 2;
+	}
+}

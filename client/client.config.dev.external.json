@@ -1,0 +1,23 @@
+{
+  "runtime": {
+    "DDP_DEFAULT_CONNECTION_URL": "192.168.1.21:3000"
+  },
+  "import": [
+    "meteor-base",
+    "mongo",
+    "tracker",
+    "accounts-password",
+    "alanning:roles",
+    "http",
+    "mrt:external-file-loader",
+    "jagi:astronomy@=2.5.8",
+    "jagi:astronomy-timestamp-behavior",
+    "grove:call-async",
+    "accounts-facebook"
+  ],
+  "externalNpmPackages": [
+    "@babel/runtime"
+  ],
+  "generateNodeModules": true,
+  "npmInstall": true
+}

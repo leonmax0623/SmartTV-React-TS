@@ -1,0 +1,35 @@
+.adminHeader {
+	background-color: #000 !important;
+
+	.toolbar {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.menuAndHeader {
+		display: flex;
+
+		h6 {
+			line-height: 48px;
+		}
+	}
+
+	a {
+		color: #fafafa;
+
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		&:active, &:focus {
+			color: #fafafa;
+			text-decoration: none;
+			outline: none;
+		}
+	}
+
+	.logo {
+		margin-right: 16px;
+	}
+}

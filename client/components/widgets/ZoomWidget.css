@@ -1,0 +1,20 @@
+.zoom-view-port,
+.zoom-view-port .react-draggable,
+.zoom-view-port .react-draggable .MuiPaper-root,
+.zoom-view-port .react-draggable .MuiPaper-root .MuiPaper-root,
+.zoom-view-port .react-draggable .MuiPaper-root .MuiPaper-root #suspension-view-tabpanel-speaker,
+.zoom-view-port .react-draggable .MuiPaper-root .MuiPaper-root #suspension-view-tabpanel-speaker > .MuiBox-root,
+.zoom-view-port .react-draggable .MuiPaper-root .MuiPaper-root #suspension-view-tabpanel-speaker > .MuiBox-root > div:nth-child(2){
+	width: 100%;
+	height: 100%;
+}
+
+.zoom-view-port .MuiToolbar-root {
+	display: none;
+}
+
+.zoom-view-port .MuiPaper-root .MuiPaper-root:last-of-type {
+    width: auto;
+    height: auto;
+    transform: translateY(calc(-100% - 16px)) scale(2);
+}

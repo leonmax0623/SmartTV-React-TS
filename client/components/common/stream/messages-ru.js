@@ -1,0 +1,30 @@
+export default {
+	todayButton: {
+		today: 'Сегодня',
+		repeatLabel: 'Повторить',
+	},
+	editRecurrenceMenu: {
+		all: 'Все задачи',
+		current: 'Текущий',
+		currentAndFollowing: 'Текущий и последующие',
+		menuDeletingTitle: 'Изменение повторяющейся задачи',
+		cancelButton: 'Отмена',
+		commitButton: 'Сохранить',
+	},
+	appointmentForm: {
+		startDate: 'Дата начала показа',
+		endDate: 'Дата окончания показа',
+		titleLabel: 'Заголовок',
+		repeatLabel: 'Повторять',
+		commitCommand: 'Сохранить',
+		removeCommand: 'Удалить',
+		cancelCommand: 'Отменить',
+		daily: 'Повторять ежедневно',
+		weekly: 'Повторять еженедельно',
+		monthly: 'Повторять ежемесячно',
+		yearly: 'Повторять ежегодно',
+		never: 'Не повторять',
+		onLabel: 'Сколько раз',
+		afterLabel: 'До даты',
+	},
+};

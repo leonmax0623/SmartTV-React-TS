@@ -1,0 +1,30 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-base@1.4.0             # Packages every Meteor app needs to have
+mongo@1.8.0                   # The database Meteor supports right now
+
+accounts-password@1.5.2
+alanning:roles
+tomi:upload-server
+http@1.4.2
+meteorhacks:aggregate
+meteorhacks:picker
+shell-server@0.4.0
+grove:call-async
+
+# Webpack
+ardatan:webpack
+ardatan:webpack-dev-middleware
+
+# db
+jagi:astronomy@=2.5.8
+jagi:astronomy-timestamp-behavior
+reywood:publish-composite
+percolate:migrations
+accounts-facebook@1.3.2
+montiapm:agent
+matb33:collection-hooks

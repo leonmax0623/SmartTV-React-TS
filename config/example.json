@@ -1,0 +1,72 @@
+{
+	"uploadsDir": "/path/to/uploads/",
+	"tmpDir": "/path/to/uploads/temp/",
+	"smtp": {
+		"username": "name@domain.ru",
+		"password": "password",
+		"host": "smtp.domain.ru",
+		"port": 465
+	},
+	"instagram": {
+		"cookies": ""
+	},
+	"domain": "PRTV.SU",
+	"siteName": "PRTV",
+	"fromEmail": "test@best.com",
+	"services": {
+		"ok": {
+			"publicKey": "publicKey",
+			"accessToken": "accessToken",
+			"secretSessionKey": "secretSessionKey"
+		},
+		"vk": {
+			"secret": "secret",
+			"token": "token"
+		},
+		"google": {
+			"secret": "secret"
+		},
+		"facebook": {
+			"appId": "appId",
+			"appSecret": "appSecret"
+		},
+		"owm": {
+			"token": "token"
+		},
+		"yandex": {
+			"apiKey": "apiKey"
+		},
+		"twitter": {
+			"consumer_key": "consumer_key",
+			"consumer_secret": "consumer_secret",
+			"access_token_key": "access_token_key",
+			"access_token_secret": "access_token_key"
+		},
+		"sendpulse": {
+			"apiUserId": "ID",
+			"apiSecret": "Secret"
+		},
+		"elecont": {
+			"apiKey": "apiKey"
+		},
+		"RBKMoney": {
+			"apiUrl": "https://api.rbk.money/v2",
+			"apiKey": "qwe",
+			"shopId": "123",
+			"formScriptUrl": "https://checkout.rbk.money/checkout.js"
+		}
+	},
+	"adminUser": {
+		"email": "some@email.ru",
+		"password": "123456",
+		"phone": "81234567890"
+	},
+	"montiapm": {
+		"appId": "APP_ID",
+		"appSecret": "APP_SECRET"
+	},
+	"vimeo": {
+		"userId":  "123",
+		"accessToken": "456"
+	}
+}

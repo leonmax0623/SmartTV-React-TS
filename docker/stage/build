@@ -1,0 +1,28 @@
+#!/bin/sh
+set -e
+IFS=$'\n'
+
+echo "Build stage"
+echo " "
+
+env -i UID=$UID $(printenv | grep '^CI_') bash -c '
+  set -a;
+  source .env.dist;
+
+  export COMPOSE_FILE=docker-compose.yaml:docker-compose.stage.yaml
+  export COMPOSE_PROJECT_NAME=$COMPOSE_PROJECT_NAME-$CI_COMMIT_BRANCH
+  export DOCKER_USER="$UID:$UID"
+
+  unset UID
+
+  (printenv | grep -v "^_=" | sort)
+' > .env
+
+cat .env
+
+echo " "
+
+docker-compose up -d --build --remove-orphans
+
+echo " "
+echo "App url: https://$CI_ENVIRONMENT_DOMAIN"

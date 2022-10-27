@@ -1,0 +1,22 @@
+.circleTabsWrapper {
+    display: flex;
+    justify-content: center;
+}
+.circleTabs {
+    display: inline-flex;
+    border-radius: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.12)
+}
+.circleTab {
+    display: inline-flex;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 32px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    margin: -1px;
+
+    &.active {
+        border-color: #3F51B5;
+    }
+}

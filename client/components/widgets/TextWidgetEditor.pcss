@@ -1,0 +1,42 @@
+.textWidget {
+	font-size: 30px;
+
+	ul {
+		list-style: unset;
+	}
+
+	ol {
+		list-style: decimal;
+	}
+}
+
+.fontSizeContainer {
+	display: inline-block;
+	padding: 0 !important;
+
+	.fontSizeAutocomplete {
+		.fontSizeInputRoot {
+			margin: 3px 0 3px 10px;
+			padding: 0;
+			width: 68px;
+
+			input[type=number] {
+				-moz-appearance: textfield;
+
+				&::-webkit-outer-spin-button,
+				&::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+			}
+		}
+
+		.fontSizePopupIndicator {
+			margin-top: 5px;
+		}
+	}
+}
+
+.fontSizeOption {
+	padding: 0 !important;
+}

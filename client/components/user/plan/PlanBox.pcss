@@ -1,0 +1,86 @@
+.planBox {}
+.planBox {
+    &__inner {
+        display: flex;
+    }
+    &__title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    &__subtitle {
+        font-size: 14px;
+        line-height: 20px;
+        color: #3F51B5;
+        font-weight: 500;
+    }
+    &__props {
+        margin-bottom: -8px;
+    }
+    &__prop {
+        display: flex;
+        align-items: center;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid rgba(0, 0, 0, .12)
+    }
+    &__prop:last-child {
+        border-bottom: 0;
+    }
+    &__prop-key {
+        flex: 1 0 auto;
+        font-size: 12px;
+        line-height: 20px;
+        opacity: 0.6;
+        margin-right: 10px;
+    }
+    &__prop-value {
+        flex: 0 0 auto;
+        opacity: 0.87;
+        font-size: 20px;
+        line-height: 28px;
+    }
+    &__minor {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 auto;
+        min-width: 180px;
+        text-align: center;
+        justify-content: space-between;
+        margin-right: 24px;
+        box-shadow: 0 0.3px 0.5px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        padding: 15px 22px 24px
+    }
+    &__minor-middle {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    &__minor-title {
+    }
+    &__minor-subtitle {
+        margin-bottom: 8px;
+    }
+    &__minor-benefit {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 4px;
+        opacity: .6;
+    }
+    &__minor-price {
+        color: #3F51B5;
+        border: 1px solid rgba(63, 81, 181, 0.24);
+        border-radius: 4px;
+        padding: 8px 20px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    &__major {
+        flex: 1 0 auto;
+    }
+    &__major-title {
+        margin-bottom: 16px;
+    }
+    &__major-props {
+        margin-bottom: 16px;
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["es5", "es6", "es7", "dom"],
+    "types": ["./client/types/index.d.ts"]
+  },
+  "exclude": [
+    "node_modules",
+    ".meteor",
+    "server"
+  ],
+  "include": [
+    "./generated/**/*",
+    "./client/**/*",
+    "./shared/**/*"
+  ]
+}

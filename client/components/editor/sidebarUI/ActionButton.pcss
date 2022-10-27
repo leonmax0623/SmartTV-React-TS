@@ -1,0 +1,83 @@
+.button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	height: 50px;
+	background: transparent;
+	position: relative;
+
+	&:hover {
+		background: #444;
+	}
+
+	&.primary {
+		background: #616161;
+		margin: 5px;
+		border-radius: 3px;
+
+		&:hover {
+			background: #888;
+		}
+	}
+
+	&.highlighted {
+		background: #43a047;
+
+		&:hover {
+			background: #4caf50;
+		}
+	}
+
+	.icon {
+		transition: .2s ease-in-out;
+	}
+
+	.closeIcon {
+		color: #fff;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: .2s ease-in-out;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	.arrow {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		border: 6px solid transparent;
+		border-right: 6px solid #ffffff;
+		visibility: hidden;
+		opacity: 0;
+		transition: .2s ease-in-out;
+	}
+
+	&.isSelected {
+		.icon {
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		.closeIcon {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.arrow {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&.isDisabled {
+		opacity: .6;
+		cursor: default;
+
+		&:hover {
+			background: #616161;
+		}
+	}
+}

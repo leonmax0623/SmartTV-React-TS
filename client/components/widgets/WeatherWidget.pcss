@@ -1,0 +1,82 @@
+.weatherWidget {
+	padding: 10px;
+	font-size: 24px;
+
+	.title {
+		font-weight: bold;
+		margin-bottom: 40px;
+	}
+
+	.day {
+		.dayLabel {
+			font-weight: bold;
+
+			&::first-letter {
+				text-transform: uppercase;
+			}
+		}
+
+		.items {
+			margin: -5px -5px 15px;
+			width: calc(100% + 10px);
+
+			.item {
+				padding: 5px;
+
+				.inner {
+					text-align: center;
+					padding: 30px;
+					border-radius: 5px;
+					background-color: rgba(0, 189, 250, 0.03);
+					height: 100%;
+
+					.interval {
+						font-weight: bold;
+					}
+
+					.icon {
+
+					}
+
+					.temp {
+						font-size: 150%;
+						font-weight: bold;
+						color: #FF431A;
+					}
+
+					.desc {
+						width: 80%;
+						margin: 5px auto 0;
+					}
+
+					.hum {
+						margin: 20px 0;
+					}
+
+					.pres {
+						margin-bottom: 20px;
+					}
+
+					.windSpeed {
+
+					}
+				}
+			}
+		}
+	}
+}
+
+.table {
+	margin-bottom: 40px;
+}
+
+.updateArea {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+
+	.icon {
+		margin-right: 10px;
+	}
+}

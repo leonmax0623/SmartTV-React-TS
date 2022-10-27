@@ -1,0 +1,66 @@
+.appHeader {
+	width: 100%;
+
+	.toolbar {
+		display: flex;
+		justify-content: space-between;
+		background-color: #3f51b5;
+	}
+
+	.linkTab {
+		min-width: auto !important;
+		white-space: nowrap;
+		flex-basis: auto !important;
+		padding: 6px 18px !important;
+	}
+
+	.linkSocTab {
+		min-width: auto !important;
+		white-space: nowrap;
+		flex-basis: auto !important;
+		padding: 6px 10px !important;
+	}
+
+	.tabs {
+		width: 100%;
+		display: flex;
+	}
+
+	.menuAndHeader {
+		width: 100%;
+		display: flex;
+	}
+
+	:global a {
+		text-decoration: none;
+		color: #fafafa;
+		fill: #fafafa;
+
+		&:hover {
+			color: #fff;
+			fill: #fff;
+			text-decoration: none;
+		}
+
+		&:active, &:focus {
+			color: #fafafa;
+			fill: #fafafa;
+			text-decoration: none;
+			outline: none;
+		}
+	}
+
+	.logo {
+		margin-right: 48px;
+		line-height: 48px !important;
+	}
+}
+
+.headerMenu {
+	a {
+		&:hover, &:active, &:focus {
+			text-decoration: none;
+			outline: none;
+		}
+	}
+}

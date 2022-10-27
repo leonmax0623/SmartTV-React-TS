@@ -1,0 +1,20 @@
+{
+  "import": [
+    "meteor-base",
+    "mongo",
+    "tracker",
+    "accounts-password",
+    "alanning:roles",
+    "http",
+    "mrt:external-file-loader",
+    "jagi:astronomy@=2.5.8",
+    "jagi:astronomy-timestamp-behavior",
+    "grove:call-async",
+    "accounts-facebook"
+  ],
+  "externalNpmPackages": [
+    "@babel/runtime"
+  ],
+  "generateNodeModules": true,
+  "npmInstall": true
+}

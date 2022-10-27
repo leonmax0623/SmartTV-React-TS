@@ -1,0 +1,24 @@
+.el-clock {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+
+	.el-clock-inner {
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	.city {
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+
+	.colon, .date {
+		font-weight: bold;
+	}
+
+	.digits {
+		padding: 0.05em;
+		font-weight: bold;
+	}
+}
